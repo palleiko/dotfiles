@@ -1,0 +1,60 @@
+out_to_x no
+own_window no
+out_to_console yes
+background no
+max_text_width 0
+
+# Update interval in seconds
+update_interval 1
+
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Shortens units to a single character (kiB->k, GiB->G, etc.). Default is off.
+short_units yes
+
+# How strict should if_up be when testing an interface for being up?
+# The value is one of up, link or address, to check for the interface
+# being solely up, being up and having link or being up, having link
+# and an assigned IP address. 
+if_up_strictness address
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+# use_spacer should have an argument of left, right, or none
+use_spacer none
+
+# Force UTF8? note that UTF8 support required XFT
+override_utf8_locale no
+
+# number of cpu samples to average
+# set to 1 to disable averaging
+cpu_avg_samples 2
+
+# Stuff after 'TEXT' will be formatted on screen
+
+
+TEXT
+
+# JSON for i3bar
+[
+ { "full_text" : "\ue271${fs_free}", "color" : "\#7070f0", "separator": false},
+ { "full_text" : "${if_up wlp3s0}\uf1eb ${wireless_essid}${endif}", "color" : "\#a6e22e", "separator": false },
+ { "full_text" : "${if_up wlp3s0}\uf077 ${upspeed wlp3s0}${endif}", "min_width": " _ 9999B", "color" : "\#a6e22e", "separator": false },
+ { "full_text" : "${if_up wlp3s0}\uf078 ${downspeed wlp3s0}${endif}", "min_width": " _ 9999B", "color" : "\#a6e22e", "separator": false },
+ { "full_text" : "${if_up enp0s25}\ue0cc ${addr enp0s25}${endif}", "color" : "\#a6e22e", "separator": false },
+ { "full_text" : "${if_up enp0s25}\uf077 ${upspeed enp0s25}${endif}", "min_width": " _ 9999B", "color" : "\#a6e22e", "separator": false },
+ { "full_text" : "${if_up enp0s25}\uf078 ${downspeed enp0s25}${endif}", "min_width": " _ 9999B", "color" : "\#a6e22e", "separator": false },
+ { "full_text" : "${if_match ${exec bash $HOME/.config/conky/volume.sh} == 0}}\uf026 ${exec bash $HOME/.config/conky/volume.sh}%${endif}", "min_width": "_ 100%", "separator": false},
+ { "full_text" : "${if_match ${exec bash $HOME/.config/conky/volume.sh} <= 40}${if_match ${exec bash $HOME/.config/conky/volume.sh} > 0}\uf027 ${exec bash $HOME/.config/conky/volume.sh}%${endif}${endif}", "min_width": "_ 100%", "separator": false},
+ { "full_text" : "${if_match ${exec bash $HOME/.config/conky/volume.sh} <= 100}${if_match ${exec bash $HOME/.config/conky/volume.sh} > 40}\uf028 ${exec bash $HOME/.config/conky/volume.sh}%${endif}${endif}", "min_width": "_ 100%", "separator": false},
+ { "full_text" : "\ue266 ${memperc}%", ${if_match ${memperc} <= 90} "color": "\#d63ae1" ${else} "color": "\#ff0044" ${endif}, "min_width": "_ 100% ", "separator": false},
+ { "full_text" : "\uf1fe ${cpu}%", ${if_match ${memperc} <= 90} "color": "\#d63ae1" ${else} "color": "\#ff0044" ${endif}, "min_width": "_ 100% ", "separator": false},
+ { "full_text" : "${if_match "${exec bash $HOME/.config/conky/bat_status.sh}" == "Charging"}\uf1e6 ${battery_percent}%${endif}", "color": "\#66d9ef", "min_width": "__ 100%", "separator": false},
+ { "full_text" : "${if_match "${exec bash $HOME/.config/conky/bat_status.sh}" =! "Charging"}${if_match ${battery_percent} <= 20}\uf244${battery_percent}%${endif}${endif}", "color": "\#ff0044", "min_width": "__ 100%", "separator": false},
+ { "full_text" : "${if_match "${exec bash $HOME/.config/conky/bat_status.sh}" =! "Charging"}${if_match ${battery_percent} <= 40}${if_match ${battery_percent} > 20}\uf243 ${battery_percent}% ${endif}${endif}${endif}", "color": "\#fd971f", "min_width": "__ 100%", "separator": false},
+ { "full_text" : "${if_match "${exec bash $HOME/.config/conky/bat_status.sh}" =! "Charging"}${if_match ${battery_percent} <= 70}${if_match ${battery_percent} > 40}\uf242 ${battery_percent}% ${endif}${endif}${endif}", "color": "\#e6db74", "min_width": "__ 100%", "separator": false},
+ { "full_text" : "${if_match "${exec bash $HOME/.config/conky/bat_status.sh}" =! "Charging"}${if_match ${battery_percent} <= 85}${if_match ${battery_percent} > 70}\uf241 ${battery_percent}% ${endif}${endif}${endif}", "color": "\#82b414", "min_width": "__ 100%", "separator": false},
+ { "full_text" : "${if_match "${exec bash $HOME/.config/conky/bat_status.sh}" =! "Charging"}${if_match ${battery_percent} > 85}\uf240 ${battery_percent}% ${endif}${endif}", "color": "\#82b414", "min_width": "__ 100%", "separator": false},
+ { "full_text" : "\uf073 ${time %a %b %d, %Y}  ${time %H:%M} ", "color": "\#cccccc", "separator": false}
+],

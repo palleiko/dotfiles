@@ -1,0 +1,2 @@
+#!/bin/sh
+feh  --bg-fill '/home/ian/Downloads/wallpaper.png' 
