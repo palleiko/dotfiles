@@ -45,7 +45,7 @@ TEXT
  { "full_text" : "${if_up enp0s25}\ue0cc ${addr enp0s25}${endif}", "color" : "\#a6e22e", "separator": false },
  { "full_text" : "${if_up enp0s25}\uf077 ${upspeed enp0s25}${endif}", "min_width": " _ 9999B", "color" : "\#a6e22e", "separator": false },
  { "full_text" : "${if_up enp0s25}\uf078 ${downspeed enp0s25}${endif}", "min_width": " _ 9999B", "color" : "\#a6e22e", "separator": false },
- { "full_text" : "${if_match ${exec bash $HOME/.config/conky/volume.sh} == 0}}\uf026 ${exec bash $HOME/.config/conky/volume.sh}%${endif}", "min_width": "_ 100%", "separator": false},
+ { "full_text" : "${if_match ${exec bash $HOME/.config/conky/volume.sh} == 0}\uf026 ${exec bash $HOME/.config/conky/volume.sh}%${endif}", "min_width": "_ 100%", "separator": false},
  { "full_text" : "${if_match ${exec bash $HOME/.config/conky/volume.sh} <= 40}${if_match ${exec bash $HOME/.config/conky/volume.sh} > 0}\uf027 ${exec bash $HOME/.config/conky/volume.sh}%${endif}${endif}", "min_width": "_ 100%", "separator": false},
  { "full_text" : "${if_match ${exec bash $HOME/.config/conky/volume.sh} <= 100}${if_match ${exec bash $HOME/.config/conky/volume.sh} > 40}\uf028 ${exec bash $HOME/.config/conky/volume.sh}%${endif}${endif}", "min_width": "_ 100%", "separator": false},
  { "full_text" : "\ue266 ${memperc}%", ${if_match ${memperc} <= 90} "color": "\#d63ae1" ${else} "color": "\#ff0044" ${endif}, "min_width": "_ 100% ", "separator": false},
