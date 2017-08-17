@@ -7,7 +7,6 @@ Xft.hinting: 1
 Xft.hintstyle: hintfull
 
 Xcursor.theme:	 Neutral
-! *font: -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
 
 ! terminal colours
 *foreground:#CCCCCC

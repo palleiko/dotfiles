@@ -49,6 +49,11 @@ client.background       $back
 # mod4 = Winkey (xmodmap to show)
 set $mod Mod1
 
+# Pulse Audio controls
+bindcode 123 exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindcode 122 exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindcode 121 exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
 # ROFI for executing applications
 bindsym $mod+space exec rofi -show run 
 # Using bindcode for compatibility
