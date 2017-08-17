@@ -38,7 +38,7 @@ Xcursor.theme:	 Neutral
 *color7:    #CCCCCC
 *color15:   #F8F8F2
 
-! Google's Hack font patched with icons
+! Googles Hack font patched with icons
 URxvt.font: xft:Knack Nerd Font:size=8:antialias=true
 URxvt.letterSpace:      0
 
