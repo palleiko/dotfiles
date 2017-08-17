@@ -87,7 +87,7 @@ bindcode $mod+53 exec dmenu_run -fn "$ft" -nb "$back" -nf "$white" -sb "$yellow"
 #...........
 
 # i3 Lock Fancy
-bindsym Mod4+l exec i3lock-fancy -f Consolas
+bindsym Mod4+l exec i3lock-fancy -p -f Hack
 
 # kill focused window (mod+q)
 bindcode $mod+24 kill
@@ -176,7 +176,7 @@ bindcode $mod+Shift+54 reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3) (mod+shitf+r)
 bindcode $mod+Shift+27 restart
 # exit i3 (logs you out of your X session) (mod+shitf+e)
-#bindcode $mod+Shift+26 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that) (mod+r)
 mode "resize" {
@@ -220,4 +220,5 @@ bar {
 }
 
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec feh --bg-fill ~/Downloads/wallpaper.png
+exec feh --bg-fill ~/.wallpaper.jpg
+exec --no-startup-id nm-applet
