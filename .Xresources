@@ -40,7 +40,7 @@ Xcursor.theme:	 Neutral
 
 ! Googles Hack font patched with icons
 URxvt.font: xft:Knack Nerd Font:size=8:antialias=true
-URxvt.letterSpace:      0
+URxvt.letterSpace: 0
 
 URxvt.depth: 32
 URxvt*scrollBar: false
