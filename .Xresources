@@ -1,10 +1,3 @@
-! Configuración de recursos X
-! 02 ene 2015 - E7
-! vim: set ft=xdefaults:
-
-! XFT - Fuentes
-!----------------------------------------------------------------------
-
 Xft.dpi: 96
 Xft.antialias: 1
 Xft.rgba: rgb
@@ -125,8 +118,13 @@ URxvt.keysym.M-C-S-End        : \033[1;8F
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
-rofi.color-enabled: true
-rofi.color-window: #1b1d1e, #808080, #808080
-rofi.color-normal: #fdf6e3, #002b36, #eee8d5, #586e75, #eee8d5
-rofi.color-active: #fdf6e3, #268bd2, #eee8d5, #268bd2, #fdf6e3
-rofi.color-urgent: #fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3
+! "Color scheme for normal row" Set from: File
+rofi.color-normal:                   #1b1d1e, #f8f8f2, #1b1d1e, #141411, #f8f8f2
+! "Color scheme for urgent row" Set from: File
+rofi.color-urgent:                   #1b1d1e, #f92672, #1b1d1e, #f92672, #f8f8f2
+! "Color scheme for active row" Set from: File
+rofi.color-active:                   #1b1d1e, #a6e22a, #1b1d1e, #141411, #a6e22a
+! "Color scheme window" Set from: File
+rofi.color-window:                   #1b1d1e, #002b36, #f92672
+! "Separator style (none, dash, solid)" Set from: File
+rofi.separator-style:                solid

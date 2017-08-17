@@ -50,7 +50,7 @@ client.background       $back
 set $mod Mod1
 
 # ROFI for executing applications
-bindsym $mod+space exec rofi 
+bindsym $mod+space exec rofi -show run 
 # Using bindcode for compatibility
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -120,7 +120,7 @@ bindcode $mod+41 fullscreen
 # change container layout (stacked (mod+s), tabbed (mod+t), default(mod+e))
 bindcode $mod+Shift+39 layout stacking
 bindcode $mod+Shift+28 layout tabbed
-bindcode $mod+Shift+40 layout default
+bindsym $mod+e layout default
 bindcode $mod+Shift+25 layout toggle split
 
 # toggle tiling / floating (mod+shitf+space)
