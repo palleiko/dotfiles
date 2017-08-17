@@ -56,7 +56,7 @@ URxvt.visualBell: False
 URxvt*saveLines: 1024
 URxvt*mouseWheelScrollPage: true
 URxvt.transparent: true
-URxvt.shading: 30
+URxvt.shading: 15
 
 ! Extensions ~/.urxvt./ext
 URxvt.perl-ext-common: default,clipboard,keyboard-select,url-select
