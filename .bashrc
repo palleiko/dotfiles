@@ -22,6 +22,7 @@ PS1="\u@\h [\w] \$ "
 export EDITOR="vim"
 export BROWSER="google-chrome-stable"
 alias cl='clear'
+alias fucking='sudo'
 alias ..='cd ..'
 alias 'cd..'='cd ..'
 alias 'cd'='cd'

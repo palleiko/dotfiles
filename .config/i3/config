@@ -81,11 +81,8 @@ bindcode $mod+Control+28 exec ~/.i3/i3_focus_or_run.sh -t mldonkey ~/bin/termina
 # start dmenu (mod+x)
 bindcode $mod+53 exec dmenu_run -fn "$ft" -nb "$back" -nf "$white" -sb "$yellow" -sf "$black"
 
-# Media keys
-# En Manzanita ya lo hace solo el pbbuttons
-#bindcode 123 exec --no-startud-id "amixer sset Master 5%+"
-#bindcode 122 exec --no-startud-id "amixer sset Master 5%-"
-#bindcode 121 exec --no-startud-id "amixer -q sset Master toggle"
+assign [class="slack"] 5
+assign [class="hangouts"] 5
 
 #...........
 # Keybinds i3
@@ -131,6 +128,8 @@ bindcode $mod+Shift+25 layout toggle split
 # toggle tiling / floating (mod+shitf+space)
 bindcode $mod+Shift+65 floating toggle
 bindcode $mod+Control+65 floating toggle
+# Picture in Picture hack
+bindsym $mod+c exec "i3-msg 'floating toggle; sticky toggle; resize shrink width 10000px; resize grow width 400px; resize shrink height 10000px; resize grow height 250px;move position 1120px 600px;'"
 
 # change focus between tiling / floating windows (mod+space)
 # bindcode $mod+65 focus mode_toggle
