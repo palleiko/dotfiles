@@ -62,7 +62,6 @@ Xcursor.theme:	 Neutral
 ! URxvt.font: xft:Knack Nerd Font:size=8:antialias=true
 URxvt.font: xft:PragmataPro Mono:size=9:antialias=true
 
-
 URxvt.letterSpace: 0
 
 URxvt.keysym.Shift-Up: command:\033]720;1\007
