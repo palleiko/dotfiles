@@ -36,3 +36,4 @@ export PATH="$PATH:$HOME/bin"
 
 PATH=$PATH:/home/ian/010editor
 export PATH
+export ANDROID_HOME=/opt/android-sdk

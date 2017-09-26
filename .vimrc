@@ -9,7 +9,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
-Plugin 'bling/vim-airline'
+" Plugin 'bling/vim-airline'
 Plugin 'valloric/youcompleteme'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
@@ -18,9 +18,12 @@ Plugin 'scrooloose/nerdtree'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+set tabstop=3
+set shiftwidth=3
+" set expandtab
+
 syntax on
 set number
 set encoding=utf-8
-colorscheme molokai
+colorscheme Tomorrow-Night
 set background=dark
-hi Normal guibg=NONE ctermbg=NONE
