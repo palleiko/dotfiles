@@ -10,8 +10,8 @@ Xcursor.theme:	 Neutral
 
 !TomorrowNight
 #define t_background 	#1d1f21
-#define t_current_line 	#282a2e
-#define t_selection 		#373b41
+#define t_current_line 	#c5c8c6
+#define t_selection 		#c6c8c6
 #define t_foreground 	#c5c8c6
 #define t_comment	     	#969896
 #define t_red		     	#cc6666
@@ -58,9 +58,10 @@ Xcursor.theme:	 Neutral
 ! Light Grey (Selection) + White (Current Line)
 *.color7:       t_selection
 *.color15:      t_current_line
+
 ! Googles Hack font patched with icons
-! URxvt.font: xft:Knack Nerd Font:size=8:antialias=true
-URxvt.font: xft:PragmataPro Mono:size=9:antialias=true
+!URxvt.font: xft:Knack Nerd Font:size=8:antialias=true
+Rxvt.font: xft:PragmataPro Mono:size=9:antialias=true
 
 URxvt.letterSpace: 0
 

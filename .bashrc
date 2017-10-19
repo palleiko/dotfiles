@@ -20,7 +20,7 @@ alias grep='grep --color=auto'
 PS1="\u@\h [\w] \$ "
 
 export EDITOR="vim"
-export BROWSER="google-chrome-stable"
+export BROWSER="firefox"
 alias cl='clear'
 alias fucking='sudo'
 alias ..='cd ..'

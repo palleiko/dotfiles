@@ -5,7 +5,7 @@ background no
 max_text_width 0
 
 # Update interval in seconds
-update_interval 1
+update_interval 0.5
 
 # This is the number of times Conky will update before quitting.
 # Set to zero to run forever.
@@ -38,10 +38,13 @@ TEXT
 
 # JSON for i3bar
 [
-	{ "full_text" : "\ue271${fs_free}", 
-		"color" : "\#81a2be", 
-		"separator": false},
- 
+	{ "full_text" : "${exec xdotool getwindowfocus getwindowname}",
+	  "color"	  : "\#b294bb",
+	  "align" : "left",
+	  "separator" : false },
+	{ "full_text" : "\uf068",
+	  "color"	  : "\#373b41",
+	  "separator" : false},
 	{ "full_text" : "${if_up wlp3s0}\uf1eb ${wireless_essid}${endif}", 
 		"color" : "\#b5db68", 
 		"separator": false },
@@ -54,58 +57,23 @@ TEXT
 		"color" : "\#b5db68",
 		"separator": false },
  	{ "full_text" : "${if_up enp0s25}\ue0cc ${addr enp0s25}${endif}",
-		"color" : "\#a6e22e",
+		"color" : "\#b5bd68",
 		"separator": false },
 	{ "full_text" : "${if_up enp0s25}\uf077 ${upspeed enp0s25}${endif}",
-		"min_width": " _ 9999B", "color" : "\#a6e22e", "separator": false },
+		"min_width": " _ 9999B",
+		"color" : "\#b5bd68",
+		"separator": false },
  	{ "full_text" : "${if_up enp0s25}\uf078 ${downspeed enp0s25}${endif}",
 		"min_width": " _ 9999B",
-		"color" : "\#a6e22e",
+		"color" : "\#b5bd68",
 		"separator": false },
- 	{ "full_text" : "${if_match ${exec bash $HOME/.config/conky/volume.sh} == 0}\uf026 ${exec bash $HOME/.config/conky/volume.sh}%${endif}",
-		"color": ${if_match ${exec bash $HOME/.config/conky/muted.sh} !=0 }"\#cccccc"${else}"\#666666"${endif},
-		"min_width": "_ 100%",
-		"separator": false},
-	{ "full_text" : "${if_match ${exec bash $HOME/.config/conky/volume.sh} <= 40}${if_match ${exec bash $HOME/.config/conky/volume.sh} > 0}\uf027 ${exec bash $HOME/.config/conky/volume.sh}%${endif}${endif}",
-		"color": ${if_match ${exec bash $HOME/.config/conky/muted.sh} !=0 }"\#cccccc"${else}"\#808080"${endif},
-		"min_width": "_ 100%", "separator": false},
-	{ "full_text" : "${if_match ${exec bash $HOME/.config/conky/volume.sh} <= 100}${if_match ${exec bash $HOME/.config/conky/volume.sh} > 40}\uf028 ${exec bash $HOME/.config/conky/volume.sh}%${endif}${endif}",
-		"color": ${if_match ${exec bash $HOME/.config/conky/muted.sh} !=0 }"\#cccccc"${else}"\#808080"${endif},
-		"min_width": "_ 100%",
-		"separator": false},
-	{ "full_text" : "MEM:${memperc}%",
-		"color" : "\\${exec bash $HOME/.config/conky/memcolor.sh}", 
-		"min_width": "MEM:100% ",
-		"separator": false},
- 	{ "full_text" : "CPU:${cpu}%",
-		"color": "\\${exec bash $HOME/.config/conky/cpucolor.sh}", 
- 		"min_width": "CPU:100% ",
-		"separator": false},
- 	{ "full_text" : "${if_match "${exec bash $HOME/.config/conky/charging.sh}" == "1" }\uf1e6 ${battery_percent}%${endif}",
-	 	"color": "\#b5db68",
-		"min_width": "__ 100%",
-		"separator": false},
- 	{ "full_text" : "${if_match "${exec bash $HOME/.config/conky/charging.sh}" == "0" }${if_match ${battery_percent} <= 20}\uf244${battery_percent}%${endif}${endif}",
-		"color": "\#cc6666",
-		"min_width": "_ 100%",
-		"separator": false},
- { "full_text" : "${if_match "${exec bash $HOME/.config/conky/charging.sh}" == "0" }${if_match ${battery_percent} <= 40}${if_match ${battery_percent} > 20}\uf243 ${battery_percent}% ${endif}${endif}${endif}",
-		"color": "\#de935f",
-		"min_width": "__ 100%",
-		"separator": false},
- { "full_text" : "${if_match "${exec bash $HOME/.config/conky/charging.sh}" == "0" }${if_match ${battery_percent} <= 70}${if_match ${battery_percent} > 40}\uf242 ${battery_percent}% ${endif}${endif}${endif}",
-		"color": "\#f0c674",
-		"min_width": "__ 100%",
-		"separator": false},
- { "full_text" : "${if_match "${exec bash $HOME/.config/conky/charging.sh}" == "0" }${if_match ${battery_percent} <= 85}${if_match ${battery_percent} > 70}\uf241 ${battery_percent}% ${endif}${endif}${endif}",
-		"color": "\#82b414",
-		"min_width": "__ 100%",
-		"separator": false},
- { "full_text" : "${if_match "${exec bash $HOME/.config/conky/charging.sh}" == "0" }${if_match ${battery_percent} > 85}\uf240 ${battery_percent}% ${endif}${endif}",
-		"color": "\#b5bd68",
-		"min_width": "__ 100%",
-		"separator": false},
- { "full_text" : "\uf073 ${time %a %b %d, %Y}  ${time %H:%M} ",
+	${exec bash $HOME/.config/conky/vol_output.sh}
+	${exec bash $HOME/.config/conky/load_output.sh}
+ 	${exec bash $HOME/.config/conky/bat_output.sh}
+	{ "full_text" : "\uf073 ${time %a %b %d, %Y} ",
 		"color": "\#969896",
-		"separator": false}
+		"separator": false},
+	{ "full_text" : "${time %H:%M} ",
+	  "color" 	  : "\#c5c8c6",
+	  "separator" : false}
 ],
