@@ -35,8 +35,8 @@ if [[ "${acpi_out}" = "Charging" ]]; then
 else
 	BAT1_CHARGING=0
 fi
-BAT0_PERC=$(acpi | grep "Battery 0: " | cut -d, -f2 | sed 's/ //' | sed 's/%//')
-BAT1_PERC=$(acpi | grep "Battery 1: " | cut -d, -f2 | sed 's/ //' | sed 's/%//')
+BAT0_PERC=$(acpi | grep "Battery 0: " | cut -d, -f2 | sed 's/[^0-9]*//g')
+BAT1_PERC=$(acpi | grep "Battery 1: " | cut -d, -f2 | sed 's/[^0-9]*//g')
 
 if [[ $BAT0_CHARGING -eq 1 ]]; then
 	BAT0_ICON="$PLUGGED"
