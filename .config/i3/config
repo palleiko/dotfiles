@@ -7,10 +7,7 @@
 # Font
 #.......
 
-#set $ft xft:DroidSans:size=8
-#set $ft pango:Inconsolata:size=8
-#set $ft -xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1
-font pango: Knack Nerd Font 10
+font pango: PragmataProMono 9
 
 gaps inner 4
 gaps outer 0
@@ -23,20 +20,22 @@ new_window pixel 2
 new_float pixel 2
 
 # Hybrid colors
-set $back               #1d1F21
 set $black              #1d1f21
 set $grey               #666666
 set $lightgrey          #969896
 set $yellow             #f0c674
 set $red                #cc6666
+set $purple 				#b294bb
 set $orange		     		#de935f
 set $green              #9ec400
+set $blue 					#81a2be
+set $white 					#c5c9c6
 
 #class                  border	backgr	text        split
-client.focused          $grey  	$grey		$orange     $red
+client.focused          $black 	$purple 	$orange     $blue
 client.focused_inactive $black	$black	$lightgrey  $grey
 client.unfocused        $black	$black	$lightgrey  $grey
-client.urgent           $black	$red	 	$orange      $red
+client.urgent           $black	$red	 	$orange     $red
 client.background       $back
 
 #..........
@@ -207,7 +206,7 @@ mode "resize" {
 bindcode $mod+27 mode "resize"
 
 bar {
-        position top
+	position top
 	height 18
  	font pango: Knack Nerd Font 8
         colors{
@@ -217,7 +216,7 @@ bar {
                 focused_workspace  $black		$black	$red
                 active_workspace   $black		$black	$red
                 inactive_workspace $black		$black	$grey
-                urgent_workspace   $red		$black	$red
+                urgent_workspace   $black 	$black	$orange
         }
         status_command bash $HOME/.config/conky/conky-i3bar
 }

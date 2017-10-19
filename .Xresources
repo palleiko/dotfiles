@@ -10,8 +10,8 @@ Xcursor.theme:	 Neutral
 
 !TomorrowNight
 #define t_background 	#1d1f21
-#define t_current_line 	#c5c8c6
-#define t_selection 		#c6c8c6
+#define t_current_line 	#282a2e
+#define t_selection 		#373b41
 #define t_foreground 	#c5c8c6
 #define t_comment	     	#969896
 #define t_red		     	#cc6666
@@ -61,7 +61,7 @@ Xcursor.theme:	 Neutral
 
 ! Googles Hack font patched with icons
 !URxvt.font: xft:Knack Nerd Font:size=8:antialias=true
-Rxvt.font: xft:PragmataPro Mono:size=9:antialias=true
+URxvt*font: xft:PragmataProMono Nerd Font:size=9:antialias=true
 
 URxvt.letterSpace: 0
 
@@ -82,12 +82,12 @@ URxvt.url-select.underline: true
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 ! "Color scheme for normal row" Set from: File
-rofi.color-normal:                   #1b1d1e, #f8f8f2, #1b1d1e, #141411, #f8f8f2
+rofi.color-normal:                   #1d1f21, #c5c8c6, #1d1f21, #141411, #c5c8c6
 ! "Color scheme for urgent row" Set from: File
-rofi.color-urgent:                   #1b1d1e, #f92672, #1b1d1e, #f92672, #f8f8f2
+rofi.color-urgent:                   #1d1f21, #cc6666, #1d1f21, #cc6666, #c5c8c6
 ! "Color scheme for active row" Set from: File
-rofi.color-active:                   #1b1d1e, #a6e22a, #1b1d1e, #141411, #a6e22a
+rofi.color-active:                   #1d1f21, #a6e22a, #1d1f21, #141411, #a6e22a
 ! "Color scheme window" Set from: File
-rofi.color-window:                   #1b1d1e, #002b36, #f92672
+rofi.color-window:                   #1d1f21, #002b36, #cc6666
 ! "Separator style (none, dash, solid)" Set from: File
 rofi.separator-style:                solid
