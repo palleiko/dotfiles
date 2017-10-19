@@ -28,7 +28,7 @@ Xcursor.theme:	 Neutral
 *.cursorColor:  #aeafad
 
 ! Black / Grey
-*.color0:       #000000
+*.color0:       #1d1f21
 *.color8:       #666666
 
 ! Red / Bright Red
