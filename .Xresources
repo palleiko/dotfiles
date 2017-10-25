@@ -81,6 +81,7 @@ URxvt.url-select.underline: true
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
+rofi.font:									PragmataPro Mono 12
 ! "Color scheme for normal row" Set from: File
 rofi.color-normal:                   #1d1f21, #c5c8c6, #1d1f21, #141411, #c5c8c6
 ! "Color scheme for urgent row" Set from: File

@@ -38,7 +38,7 @@ TEXT
 
 # JSON for i3bar
 [
-	{ "full_text" : "${exec xdotool getwindowfocus getwindowname}",
+	{ "full_text" : "${exec bash $HOME/.config/conky/current_window.sh}",
 	  "color"	  : "\#b294bb",
 	  "align" : "left",
 	  "separator" : false },
