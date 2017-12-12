@@ -61,7 +61,7 @@ Xcursor.theme:	 Neutral
 
 ! Googles Hack font patched with icons
 !URxvt.font: xft:Knack Nerd Font:size=8:antialias=true
-URxvt*font: xft:PragmataProMono Nerd Font:size=9:antialias=true
+URxvt*font: xft:PragmataProMono Nerd Font:size=10:antialias=true
 
 URxvt.letterSpace: 0
 

@@ -62,7 +62,7 @@ bindsym $mod+Control+s exec slack
 # Google Chrome
 bindsym $mod+m exec firefox
 # Terminal (mod+Enter)
-bindcode $mod+36 exec urxvt
+bindcode $mod+36 exec urxvtc
 # GTK Theme sector (mod+winkey+a)
 bindcode $mod+Control+38 exec lxappearance 
 # Color picker (mod+winkey+g)
