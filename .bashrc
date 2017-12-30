@@ -7,6 +7,8 @@ COLP="\[\033[0;35m\]" # purple
 COLR="\[\033[0;31m\]" # red
 COLN="\[\033[0m\]"	  # Reset
 
+set -o vi
+
 # user colors
 COL="$COLC"						# noraml user color
 [[ "$UID" = "0" ]] && COL=$COLR	# red for root

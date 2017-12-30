@@ -1,0 +1,15 @@
+# irrelevant folders
+*
+!/.gitignore
+!/.config/i3
+!/.config/conky
+!/.vim
+!/.Xresources
+!/.bashrc
+!/.wallpaper.jpg
+
+# vim turds
+*.swp
+*.swo
+*.swn
+
