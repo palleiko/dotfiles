@@ -1,9 +1,9 @@
 # irrelevant folders
 *
 !/.gitignore
-!/.config/i3
-!/.config/conky
-!/.vim
+!/.config/i3/*
+!/.config/conky/*
+!/.vim/*
 !/.Xresources
 !/.bashrc
 !/.wallpaper.jpg
