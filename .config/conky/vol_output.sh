@@ -1,4 +1,7 @@
 #!/bin/bash
+
+. $HOME/colors/theme
+
 mute=`amixer -c 0 get Master | grep Mono:`
 mute=`echo "${mute}" | cut -d'[' -f4`
 

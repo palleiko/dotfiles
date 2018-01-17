@@ -1,4 +1,4 @@
-# irrelevant folders
+# relevant folders
 *
 !/.gitignore
 !/.config/i3/*
@@ -7,6 +7,7 @@
 !/.Xresources
 !/.bashrc
 !/.wallpaper.jpg
+!/colors/*
 
 # vim turds
 *.swp

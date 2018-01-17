@@ -1,10 +1,6 @@
 #!/bin/bash
 
-RED="#cc6666"
-ORANGE="#de935f"
-YELLOW="#f0c674"
-GREEN="#b5bd68"
-GREY="#666666"
+. $HOME/colors/theme
 
 MIN="\\uf244"
 LOW="\\uf243"

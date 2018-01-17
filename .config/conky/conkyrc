@@ -38,10 +38,7 @@ TEXT
 
 # JSON for i3bar
 [
-	{ "full_text" : "${exec bash $HOME/.config/conky/current_window.sh}",
-	  "color"	  : "\#b294bb",
-	  "align" : "left",
-	  "separator" : false },
+	${exec bash $HOME/.config/conky/current_window.sh}
 	{ "full_text" : "\uf068",
 	  "color"	  : "\#373b41",
 	  "separator" : false},
