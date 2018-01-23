@@ -26,7 +26,7 @@ nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
 set tabstop=4
-set shiftwidth=3
+set shiftwidth=4
 " set expandtab
 
 " Pretty NERDTree Arrows

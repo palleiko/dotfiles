@@ -8,59 +8,8 @@ Xft.hintstyle: hintfull
 
 Xcursor.theme:	 Neutral
 
-!TomorrowNight
-#define t_background 	#1d1f21
-#define t_current_line 	#282a2e
-#define t_selection 		#373b41
-#define t_foreground 	#c5c8c6
-#define t_comment	     	#969896
-#define t_red		     	#cc6666
-#define t_orange	     	#de935f
-#define t_yellow 			#f0c674
-#define t_green 			#b5bd68
-#define t_aqua	        	#8abeb7
-#define t_blue	        	#81a2be
-#define t_purple 			#b294bb
+#include /home/ian/colors/themes
 
-
-*.foreground:   t_foreground
-*.background:   t_background
-*.cursorColor:  #aeafad
-
-! Black / Grey
-*.color0:       #1d1f21
-*.color8:       #666666
-
-! Red / Bright Red
-*.color1:       t_red
-*.color9:       #FF3334
-
-! Green + Bright Green
-*.color2:       t_green
-*.color10:      #9ec400
-
-! Yellow (Orange) + Bright Yellow (Yellow)
-*.color3:       t_orange
-*.color11:      t_yellow
-
-! Blue + Bright Blue
-*.color4:       t_blue
-*.color12:      t_blue
-
-! Magenta (Purple) + Bright Magenta
-*.color5:       t_purple
-*.color13:      #b777e0
-
-! Cyan (Aqua) + Bright Cyan
-*.color6:       t_aqua
-*.color14:      #54ced6
-
-! Light Grey (Selection) + White (Current Line)
-*.color7:       t_selection
-*.color15:      t_current_line
-
-! Googles Hack font patched with icons
-!URxvt.font: xft:Knack Nerd Font:size=8:antialias=true
 URxvt*font: xft:PragmataProMono Nerd Font:size=10:antialias=true
 
 URxvt.letterSpace: 0
@@ -81,14 +30,9 @@ URxvt.url-select.underline: true
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
-rofi.font:									PragmataPro Mono 12
-! "Color scheme for normal row" Set from: File
-rofi.color-normal:                   #1d1f21, #c5c8c6, #1d1f21, #141411, #c5c8c6
-! "Color scheme for urgent row" Set from: File
-rofi.color-urgent:                   #1d1f21, #cc6666, #1d1f21, #cc6666, #c5c8c6
-! "Color scheme for active row" Set from: File
-rofi.color-active:                   #1d1f21, #a6e22a, #1d1f21, #141411, #a6e22a
-! "Color scheme window" Set from: File
-rofi.color-window:                   #1d1f21, #002b36, #cc6666
-! "Separator style (none, dash, solid)" Set from: File
-rofi.separator-style:                solid
+rofi.font: PragmataPro Mono 12
+rofi.color-normal: #1d1f21, #c5c8c6, #1d1f21, #141411, #c5c8c6
+rofi.color-urgent: #1d1f21, #cc6666, #1d1f21, #cc6666, #c5c8c6
+rofi.color-active: #1d1f21, #a6e22a, #1d1f21, #141411, #a6e22a
+rofi.color-window: #1d1f21, #002b36, #cc6666
+rofi.separator-style: solid

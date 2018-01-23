@@ -1,5 +1,17 @@
+######################
+# Theme set to 
+######################
+BG="#1d1f21"
+LTBG="#282a2e"
+GREY="#373b41"
+LTGREY="#969896"
+DARKFG="#b4b7b4"
+FG="#c5c8c6"
+LTFG="#e0e0e0"
 RED="#cc6666"
 ORANGE="#de935f"
 YELLOW="#f0c674"
 GREEN="#b5bd68"
-GREY="#666666"
+LTBLUE="#8abeb7"
+BLUE="#81a2be"
+PURPLE="#b294bb"

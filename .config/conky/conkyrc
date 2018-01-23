@@ -1,3 +1,5 @@
+# Theme set to ''
+# Theme set to 'themes/base16-codeschool.config'
 out_to_x no
 own_window no
 out_to_console yes
@@ -17,7 +19,7 @@ short_units yes
 # How strict should if_up be when testing an interface for being up?
 # The value is one of up, link or address, to check for the interface
 # being solely up, being up and having link or being up, having link
-# and an assigned IP address. 
+# and an assigned IP address.
 if_up_strictness address
 
 # Add spaces to keep things from moving about?  This only affects certain objects.
@@ -38,39 +40,39 @@ TEXT
 
 # JSON for i3bar
 [
-	${exec bash $HOME/.config/conky/current_window.sh}
-	{ "full_text" : "\uf068",
-	  "color"	  : "\#373b41",
-	  "separator" : false},
-	{ "full_text" : "${if_up wlp3s0}\uf1eb ${wireless_essid}${endif}", 
-		"color" : "\#b5bd68", 
-		"separator": false },
-	{ "full_text" : "${if_up wlp3s0}\uf077 ${upspeed wlp3s0}${endif}",
-		"min_width": " _ 9999B", 
-		"color" : "\#b5bd68", 
-		"separator": false },
-	{ "full_text" : "${if_up wlp3s0}\uf078 ${downspeed wlp3s0}${endif}", 
-		"min_width": " _ 9999B",
-		"color" : "\#b5bd68",
-		"separator": false },
- 	{ "full_text" : "${if_up enp0s25}\ue0cc ${addr enp0s25}${endif}",
-		"color" : "\#b5bd68",
-		"separator": false },
-	{ "full_text" : "${if_up enp0s25}\uf077 ${upspeed enp0s25}${endif}",
-		"min_width": " _ 9999B",
-		"color" : "\#b5bd68",
-		"separator": false },
- 	{ "full_text" : "${if_up enp0s25}\uf078 ${downspeed enp0s25}${endif}",
-		"min_width": " _ 9999B",
-		"color" : "\#b5bd68",
-		"separator": false },
-	${exec bash $HOME/.config/conky/vol_output.sh}
-	${exec bash $HOME/.config/conky/load_output.sh}
- 	${exec bash $HOME/.config/conky/bat_output.sh}
-	{ "full_text" : "\uf073 ${time %a %b %d, %Y} ",
-		"color": "\#969896",
-		"separator": false},
-	{ "full_text" : "${time %H:%M} ",
-	  "color" 	  : "\#c5c8c6",
-	  "separator" : false}
+${exec bash $HOME/.config/conky/current_window.sh}
+{ "full_text" : "\uf068",
+"color"	  : "\#282828",
+"separator" : false},
+{ "full_text" : "${if_up wlp3s0}\uf1eb ${wireless_essid}${endif}",
+"color" : "\#67b11d",
+"separator": false },
+{ "full_text" : "${if_up wlp3s0}\uf077 ${upspeed wlp3s0}${endif}",
+"min_width": " _ 9999B",
+"color" : "\#67b11d",
+"separator": false },
+{ "full_text" : "${if_up wlp3s0}\uf078 ${downspeed wlp3s0}${endif}",
+"min_width": " _ 9999B",
+"color" : "\#67b11d",
+"separator": false },
+{ "full_text" : "${if_up enp0s25}\ue0cc ${addr enp0s25}${endif}",
+"color" : "\#67b11d",
+"separator": false },
+{ "full_text" : "${if_up enp0s25}\uf077 ${upspeed enp0s25}${endif}",
+"min_width": " _ 9999B",
+"color" : "\#67b11d",
+"separator": false },
+{ "full_text" : "${if_up enp0s25}\uf078 ${downspeed enp0s25}${endif}",
+"min_width": " _ 9999B",
+"color" : "\#67b11d",
+"separator": false },
+${exec bash $HOME/.config/conky/vol_output.sh}
+${exec bash $HOME/.config/conky/load_output.sh}
+${exec bash $HOME/.config/conky/bat_output.sh}
+{ "full_text" : "\uf073 ${time %a %b %d, %Y} ",
+"color": "\#585858",
+"separator": false},
+{ "full_text" : "${time %H:%M} ",
+"color" 	  : "\#a3a3a3",
+"separator" : false}
 ],

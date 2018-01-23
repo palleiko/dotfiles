@@ -20,15 +20,15 @@ new_window pixel 2
 new_float pixel 2
 
 # Hybrid colors
-set $black              #1d1f21
-set $grey               #666666
-set $lightgrey          #969896
-set $yellow             #f0c674
-set $red                #cc6666
-set $purple 			#b294bb
-set $orange		     	#de935f
-set $blue 				#81a2be
-set $white 				#c5c9c6
+set $black #1f2022
+set $grey #444155
+set $lightgrey #282828
+set $yellow #b1951d
+set $red #f2241f
+set $purple #a31db1
+set $orange #ffa500
+set $blue #4f97d7
+set $white #a3a3a3
 
 #class                  border	backgr	text        split
 client.focused          $black 	$purple 	$orange     $blue

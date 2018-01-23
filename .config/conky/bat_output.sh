@@ -1,6 +1,12 @@
 #!/bin/bash
 
-. $HOME/colors/theme
+. $HOME/colors/b16_theme.conf
+
+GREEN="$BASE0B"
+RED="$BASE08"
+YELLOW="$BASE0A"
+ORANGE="$BASE09"
+
 
 MIN="\\uf244"
 LOW="\\uf243"

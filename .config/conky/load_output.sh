@@ -1,16 +1,18 @@
 #!/bin/bash
 
+. $HOME/colors/b16_theme.conf
+
 MEM_PERC=$(echo "(`free | grep Mem | awk '{print $3/$2 * 100}'`+0.5)/1" | bc )
 cpu_info=$(top -d 0.5 -b -n2 | grep "Cpu"|tail -n 4 )
 CPU_PERC=$(echo "$(echo "$cpu_info" | awk '{print $2 + $4}')")
 CPU_PERC=$(echo $CPU_PERC | sed 's/\n/+/g' | sed 's/ /+/g' | bc)
 CPU_PERC=$(echo "$CPU_PERC/4" | bc)
 
-RED="#cc6666"
-ORANGE="#de935f"
-YELLOW="#f0c674"
-GREEN="#b5bd68"
-GREY="#666666"
+RED="$BASE08"
+ORANGE="$BASE09"
+YELLOW="$BASE0A"
+GREEN="$BASE0B"
+GREY="$BASE02"
 
 # echo "MEM: $MEM_PERC, CPU: $CPU_PERC"
 

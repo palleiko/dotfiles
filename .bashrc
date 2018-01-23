@@ -34,8 +34,4 @@ alias lsa='ls -la'
 alias ida='wine /home/ian/.wine/drive_c/Program\ Files\ \(x86\)/IDA\ 6.8/idaq64.exe & disown'
 alias term='urxvt & disown'
 
-export PATH="$PATH:$HOME/bin"
-
-PATH=$PATH:/home/ian/010editor
-export PATH
 export ANDROID_HOME=/opt/android-sdk

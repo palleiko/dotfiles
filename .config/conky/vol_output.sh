@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. $HOME/colors/theme
+. $HOME/colors/b16_theme.conf
 
 mute=`amixer -c 0 get Master | grep Mono:`
 mute=`echo "${mute}" | cut -d'[' -f4`
@@ -19,13 +19,13 @@ FULL="\uf028"
 
 if [[ $mute -eq 1 ]];then
 	VOL_ICON="$OFF"
-	VOL_COLOR="#666666"
+	VOL_COLOR="$BASE02"
 elif [[ $VOL -eq 0 ]]; then
 	VOL_ICON="$OFF"
-	VOL_COLOR="#666666"
+	VOL_COLOR="$BASE02"
 elif [[ $VOL -le 40 ]]; then
 	VOL_ICON="$LOW"
-	VOL_COLOR="#969696"
+	VOL_COLOR="$BASE04"
 else
 	VOL_ICON="$FULL"
 	VOL_COLOR="#969696"
