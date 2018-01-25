@@ -9,6 +9,10 @@ COLN="\[\033[0m\]"	  # Reset
 
 set -o vi
 
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
+
 # user colors
 COL="$COLC"						# noraml user color
 [[ "$UID" = "0" ]] && COL=$COLR	# red for root
@@ -33,5 +37,7 @@ alias :q=exit
 alias lsa='ls -la'
 alias ida='wine /home/ian/.wine/drive_c/Program\ Files\ \(x86\)/IDA\ 6.8/idaq64.exe & disown'
 alias term='urxvt & disown'
+
+base16_spacemacs
 
 export ANDROID_HOME=/opt/android-sdk

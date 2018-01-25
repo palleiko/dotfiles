@@ -4,11 +4,11 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
+Plugin 'chriskempson/base16-vim'
 " Plugin 'bling/vim-airline'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'valloric/youcompleteme'
@@ -42,9 +42,12 @@ let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 syntax on
 set number
 set encoding=utf-8
-colorscheme Tomorrow-Night
 set background=dark
