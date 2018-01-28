@@ -10,12 +10,16 @@ XRESOURCES_THEME_DIR="$HOME/colors/themes/base16-xresources/xresources/"
 VIMRC="$HOME/.vimrc"
 THEME="$1"
 
+# This defines colors used for Conky => i3bar
+#             DASH   |       WIRELESS NETWORK      |       WIRED NETWORK         |   DATE  |  TIME
+color_list=("$BASE01" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE03" "$BASE05")
+
 set_all () {
 	echo "Setting theme to '$THEME'"
 	generate_theme_file
 	set_i3config
 	conky_color_replace
-	set_Xresources
+	# set_Xresources
 	set_bashrc
 }
 set_i3config() {
@@ -88,7 +92,6 @@ set_bashrc() {
 }
 conky_color_replace() {
 	. $THEME_FILE
-	color_list=("$BASE01" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE03" "$BASE05")
 	cp $CONKY_DIR/conkyrc $CONKY_DIR/conkyrc_template
 	echo "# Theme set to '$theme'" > $CONKY_DIR/conkyrc
 
