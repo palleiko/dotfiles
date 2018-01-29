@@ -11,6 +11,14 @@
 # Theme set to ''
 # Theme set to ''
 # Theme set to ''
+# Theme set to ''
+# Theme set to ''
+# Theme set to ''
+# Theme set to ''
+# Theme set to ''
+# Theme set to ''
+# Theme set to ''
+# Theme set to ''
 # Theme set to 'themes/base16-codeschool.config'
 out_to_x no
 own_window no
@@ -54,37 +62,37 @@ TEXT
 [
 ${exec bash $HOME/.config/conky/current_window.sh}
 { "full_text" : "\uf068",
-"color"	  : "\#282828",
+"color"	  : "\#282a2e",
 "separator" : false},
 { "full_text" : "${if_up wlp3s0}\uf1eb ${wireless_essid}${endif}",
-"color" : "\#67b11d",
+"color" : "\#198844",
 "separator": false },
 { "full_text" : "${if_up wlp3s0}\uf077 ${upspeed wlp3s0}${endif}",
 "min_width": " _ 9999B",
-"color" : "\#67b11d",
+"color" : "\#198844",
 "separator": false },
 { "full_text" : "${if_up wlp3s0}\uf078 ${downspeed wlp3s0}${endif}",
 "min_width": " _ 9999B",
-"color" : "\#67b11d",
+"color" : "\#198844",
 "separator": false },
 { "full_text" : "${if_up enp0s25}\ue0cc ${addr enp0s25}${endif}",
-"color" : "\#67b11d",
+"color" : "\#198844",
 "separator": false },
 { "full_text" : "${if_up enp0s25}\uf077 ${upspeed enp0s25}${endif}",
 "min_width": " _ 9999B",
-"color" : "\#67b11d",
+"color" : "\#198844",
 "separator": false },
 { "full_text" : "${if_up enp0s25}\uf078 ${downspeed enp0s25}${endif}",
 "min_width": " _ 9999B",
-"color" : "\#67b11d",
+"color" : "\#198844",
 "separator": false },
 ${exec bash $HOME/.config/conky/vol_output.sh}
 ${exec bash $HOME/.config/conky/load_output.sh}
 ${exec bash $HOME/.config/conky/bat_output.sh}
 { "full_text" : "\uf073 ${time %a %b %d, %Y} ",
-"color": "\#585858",
+"color": "\#969896",
 "separator": false},
 { "full_text" : "${time %H:%M} ",
-"color" 	  : "\#a3a3a3",
+"color" 	  : "\#c5c8c6",
 "separator" : false}
 ],

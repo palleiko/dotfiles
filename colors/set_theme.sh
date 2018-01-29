@@ -10,16 +10,13 @@ XRESOURCES_THEME_DIR="$HOME/colors/themes/base16-xresources/xresources/"
 VIMRC="$HOME/.vimrc"
 THEME="$1"
 
-# This defines colors used for Conky => i3bar
-#             DASH   |       WIRELESS NETWORK      |       WIRED NETWORK         |   DATE  |  TIME
-color_list=("$BASE01" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE03" "$BASE05")
 
 set_all () {
 	echo "Setting theme to '$THEME'"
 	generate_theme_file
 	set_i3config
 	conky_color_replace
-	# set_Xresources
+	set_Xresources
 	set_bashrc
 }
 set_i3config() {
@@ -94,18 +91,23 @@ conky_color_replace() {
 	. $THEME_FILE
 	cp $CONKY_DIR/conkyrc $CONKY_DIR/conkyrc_template
 	echo "# Theme set to '$theme'" > $CONKY_DIR/conkyrc
+	# This defines colors used for Conky => i3bar
+	#             DASH   |       WIRELESS NETWORK      |       WIRED NETWORK         |   DATE  |  TIME
+	color_list=("$BASE01" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE03" "$BASE05")
 
 	i=0
 	while read -r line; do
 		if echo $line | grep '"color"' > /dev/null; then
 			color=${color_list[$i]}
-			echo "$line" | sed -e "s/\\#.*\"/\\$color\"/" >> $CONKY_DIR/conkyrc
+			echo "$color"
+			echo "$line" | sed -e "s/#.*\"/$color\"/" >> $CONKY_DIR/conkyrc
 			((i++))
 		else
 		   echo "$line" >> $CONKY_DIR/conkyrc
 		fi
 		# echo $line
 	 done < $CONKY_DIR/conkyrc_template
+	 sed -i '/^# Theme set to ''$/d' $CONKY_DIR/conkyrc
 }
 
 
