@@ -18,6 +18,7 @@ set_all () {
 	conky_color_replace
 	set_Xresources
 	set_bashrc
+	./wallpaper_gen.sh
 }
 set_i3config() {
 	sed -i "s/set \$black.*$/set \$black $base00/g" $I3CONFIG_FILE
@@ -93,7 +94,7 @@ conky_color_replace() {
 	echo "# Theme set to '$theme'" > $CONKY_DIR/conkyrc
 	# This defines colors used for Conky => i3bar
 	#             DASH   |       WIRELESS NETWORK      |       WIRED NETWORK         |   DATE  |  TIME
-	color_list=("$BASE01" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE03" "$BASE05")
+	color_list=("$BASE02" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE03" "$BASE05")
 
 	i=0
 	while read -r line; do
@@ -108,6 +109,7 @@ conky_color_replace() {
 		# echo $line
 	 done < $CONKY_DIR/conkyrc_template
 	 sed -i '/^# Theme set to ''$/d' $CONKY_DIR/conkyrc
+	rm $CONKY_DIR/conkyrc_template
 }
 
 

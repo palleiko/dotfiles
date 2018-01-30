@@ -19,6 +19,11 @@
 # Theme set to ''
 # Theme set to ''
 # Theme set to ''
+# Theme set to ''
+# Theme set to ''
+# Theme set to ''
+# Theme set to ''
+# Theme set to ''
 # Theme set to 'themes/base16-codeschool.config'
 out_to_x no
 own_window no
@@ -62,7 +67,7 @@ TEXT
 [
 ${exec bash $HOME/.config/conky/current_window.sh}
 { "full_text" : "\uf068",
-"color"	  : "\#282a2e",
+"color"	  : "\#373b41",
 "separator" : false},
 { "full_text" : "${if_up wlp3s0}\uf1eb ${wireless_essid}${endif}",
 "color" : "\#198844",

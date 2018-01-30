@@ -9,7 +9,7 @@
 
 font pango: PragmataProMono 9
 
-gaps inner 4
+gaps inner 8
 gaps outer 0
 
 #..........
@@ -221,5 +221,5 @@ bar {
 }
 
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec feh --bg-fill ~/.wallpaper.jpg
+exec feh --bg-fill ~/colors/b16_wallpaper.png
 exec --no-startup-id nm-applet
