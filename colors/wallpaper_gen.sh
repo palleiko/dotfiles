@@ -7,9 +7,6 @@ Y_RES=$(echo "$RES" | cut -dx -f2)
 X_BS=$(($X_RES))
 Y_BS=$(($Y_RES))
 
-
-echo "$RES" "$X_RES" "$Y_RES"
-
 convert -size $RES  xc:"$BASE02" \
 	-fill "$BASE08" -draw "rectangle 200,600 400,700" \
 	-fill "$BASE09" -draw "rectangle 400,600 600,700" \

@@ -10,16 +10,6 @@ XRESOURCES_THEME_DIR="$HOME/colors/themes/base16-xresources/xresources/"
 VIMRC="$HOME/.vimrc"
 THEME="$1"
 
-
-set_all () {
-	echo "Setting theme to '$THEME'"
-	generate_theme_file
-	set_i3config
-	conky_color_replace
-	set_Xresources
-	set_bashrc
-	./wallpaper_gen.sh
-}
 set_i3config() {
 	sed -i "s/set \$black.*$/set \$black $base00/g" $I3CONFIG_FILE
 	sed -i "s/set \$grey.*$/set \$grey $base02/g" $I3CONFIG_FILE
@@ -33,7 +23,7 @@ set_i3config() {
 }
 generate_theme_file() {
 	echo "######################" > $THEME_FILE
-	echo "# Theme set to $theme" >> $THEME_FILE
+	echo "# Theme set to $THEME" >> $THEME_FILE
 	echo "######################" >> $THEME_FILE
 	echo "BASE00=\"$base00\"" >> $THEME_FILE
 	echo "BASE01=\"$base01\"" >> $THEME_FILE
@@ -91,7 +81,7 @@ set_bashrc() {
 conky_color_replace() {
 	. $THEME_FILE
 	cp $CONKY_DIR/conkyrc $CONKY_DIR/conkyrc_template
-	echo "# Theme set to '$theme'" > $CONKY_DIR/conkyrc
+	echo "" > $CONKY_DIR/conkyrc
 	# This defines colors used for Conky => i3bar
 	#             DASH   |       WIRELESS NETWORK      |       WIRED NETWORK         |   DATE  |  TIME
 	color_list=("$BASE02" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE0B" "$BASE03" "$BASE05")
@@ -100,13 +90,11 @@ conky_color_replace() {
 	while read -r line; do
 		if echo $line | grep '"color"' > /dev/null; then
 			color=${color_list[$i]}
-			echo "$color"
 			echo "$line" | sed -e "s/#.*\"/$color\"/" >> $CONKY_DIR/conkyrc
 			((i++))
 		else
 		   echo "$line" >> $CONKY_DIR/conkyrc
 		fi
-		# echo $line
 	 done < $CONKY_DIR/conkyrc_template
 	 sed -i '/^# Theme set to ''$/d' $CONKY_DIR/conkyrc
 	rm $CONKY_DIR/conkyrc_template
@@ -116,7 +104,16 @@ conky_color_replace() {
 if [[ "$1" ]]; then
 	if [[ -f "$1"  ]]; then
 		. "$THEME"
-		set_all "$1"
+		echo "Setting theme to '$THEME'"
+		generate_theme_file
+		set_i3config
+		conky_color_replace
+		set_Xresources
+		set_bashrc
+		./wallpaper_gen.sh
+
+		i3 restart 2> /dev/null
+		echo "Done."
 
 	else
 	   echo "Error: Invalid path to theme." >&2
