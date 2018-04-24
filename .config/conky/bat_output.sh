@@ -79,13 +79,11 @@ else
 		BAT1_COLOR="$GREEN"
 	fi
 fi
-echo -n "{ \"full_text\" : \"$BAT0_ICON $BAT0_PERC% \","
-echo -n "\"color\" : \"$BAT0_COLOR\","
-echo -n "\"min_width\" : \"__\","
-echo -n "\"separator\" : false },"
-echo
-echo -n "{ \"full_text\" : \"$BAT1_ICON $BAT1_PERC% \","
-echo -n "\"color\" : \"$BAT1_COLOR\","
-echo -n "\"min_width\" : \"__\","
-echo -n "\"separator\" : false },"
-echo ""
+echo -ne "{ \"full_text\" : \"$BAT0_ICON $BAT0_PERC% \","
+echo -ne "\"color\" : \"$BAT0_COLOR\","
+echo -ne "\"min_width\" : \"__\","
+echo -ne "\"separator\" : false },\n"
+echo -ne "{ \"full_text\" : \"$BAT1_ICON $BAT1_PERC% \","
+echo -ne "\"color\" : \"$BAT1_COLOR\","
+echo -ne "\"min_width\" : \"__\","
+echo -ne "\"separator\" : false },\n"

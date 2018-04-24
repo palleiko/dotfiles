@@ -66,7 +66,8 @@ Xcursor.theme: Neutral
 *color21:      base06
 !!END
 
-URxvt*font: xft:PragmataProMono Nerd Font:size=11:antialias=true
+! URxvt*font: xft:PragmataProMono Nerd Font:size=11:antialias=true
+URxvt*font: xft:PragmataProMono Nerd Font, xft:Noto Emoji:size=8:antialias=true
 
 URxvt.letterSpace: 0
 
@@ -86,7 +87,7 @@ URxvt.url-select.underline: true
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
-rofi.font: PragmataPro Mono 12
+rofi.font: PragmataProMono Nerd Font 12
 rofi.color-normal: base00, base05, base00, base01, base05
 rofi.color-urgent: base00, base08, base00, base08, base05
 rofi.color-active: base00, base0A, base00, base01, base0A

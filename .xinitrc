@@ -1,4 +1,2 @@
-xrdb -load $HOME/.Xresources
-export TERM=rxvt-unicode
-urxvtd &
+export TERM=st
 exec i3

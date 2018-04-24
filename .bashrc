@@ -25,6 +25,7 @@ export LS_OPTIONS='--color=auto'
 alias ls='ls $LS_OPTIONS -l'
 export GREP_COLOR="1;31"
 alias grep='grep --color=auto'
+export G="https://github.com"
 
 
 PS1="$COLR\u@\h$COLB [\w]$COLG\$(parse_git_branch) $COLN\$ "

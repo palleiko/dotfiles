@@ -30,8 +30,7 @@ else
 	VOL_ICON="$FULL"
 	VOL_COLOR="#969696"
 fi
-echo -n "{ \"full_text\" : \"$VOL_ICON $VOL%\","
-echo -n "\"color\" : \"$VOL_COLOR\","
-echo -n "\"min_width\" : \"______\","
-echo -n "\"separator\" : false },"
-echo
+echo -ne "{ \"full_text\" : \"$VOL_ICON $VOL%\","
+echo -ne "\"color\" : \"$VOL_COLOR\","
+echo -ne "\"min_width\" : \"______\","
+echo -ne "\"separator\" : false },\n"

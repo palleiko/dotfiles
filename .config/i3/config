@@ -35,7 +35,7 @@ client.focused          $black 	$blue	$orange     $blue
 client.focused_inactive $black	$black	$lightgrey  $grey
 client.unfocused        $black	$black	$lightgrey  $grey
 client.urgent           $black	$red	 	$orange     $red
-client.background       $back
+client.background       $black
 
 #..........
 # Applications
@@ -62,7 +62,7 @@ bindsym $mod+Control+s exec slack
 # Google Chrome
 bindsym $mod+m exec firefox
 # Terminal (mod+Enter)
-bindcode $mod+36 exec urxvtc
+bindcode $mod+36 exec st
 # GTK Theme sector (mod+winkey+a)
 bindcode $mod+Control+38 exec lxappearance 
 # Color picker (mod+winkey+g)
@@ -208,7 +208,7 @@ bar {
 	position top
 	height 18
  	font pango: Knack Nerd Font 8
-        colors{
+        colors {
                 background $black
                 separator #3b3d3e
 					#class              border		backgr	text        split
@@ -217,7 +217,8 @@ bar {
                 inactive_workspace $black		$black	$grey
                 urgent_workspace   $black 	$black	$orange
         }
-        status_command bash $HOME/.config/conky/conky-i3bar
+		status_command bash $HOME/.config/conky/conky-i3bar
+		# bash $HOME/.config/conky/bar
 }
 
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh

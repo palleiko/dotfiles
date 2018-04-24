@@ -111,7 +111,7 @@ if [[ "$1" ]]; then
 		set_Xresources
 		set_bashrc
 		./wallpaper_gen.sh
-
+		echo -ne "Done.\nRestarting i3..."
 		i3 restart 2> /dev/null
 		echo "Done."
 
