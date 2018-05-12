@@ -7,9 +7,11 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/syntastic'
 Plugin 'chriskempson/base16-vim'
-" Plugin 'bling/vim-airline'
+Plugin 'bling/vim-airline'
+" Not needed unless tabs are expanded
+" Plugin 'Yggdroot/indentLine'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'valloric/youcompleteme'
 Plugin 'tpope/vim-surround'
@@ -29,7 +31,7 @@ set tabstop=4
 set shiftwidth=4
 " set expandtab
 
-" Pretty NERDTree Arrows
+" NERDTREE
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 " Use ctrl-n to toggle NERDTree
@@ -41,11 +43,35 @@ let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+" END NERDTREE
 
+" B16 COLOR
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
+" END B16 COLOR
+
+" SYNTASTIC
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+" END SYNTASTIC
+
+" NASM
+autocmd BufNewFile,BufRead *.asm set filetype=nasm
+" END NASM
+
+" CURSOR
+set guicursor+=n:hor20-Cursor/lCursor
+" END CURSOR
+
+set list lcs=tab:\|\ 
 
 syntax on
 set number
