@@ -1,6 +1,5 @@
 # relevant folders
 *
-!/.oh-my-zsh/*
 !/.zshrc
 !/.gitignore
 !/.config/i3/*
