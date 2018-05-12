@@ -43,6 +43,6 @@ alias lsa='ls -la'
 alias ida='wine /home/ian/.wine/drive_c/Program\ Files\ \(x86\)/IDA\ 6.8/idaq64.exe & disown'
 alias term='urxvt & disown'
 
-base16_google-dark
+base16_railscasts
 
 export ANDROID_HOME=/opt/android-sdk
