@@ -8,20 +8,20 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'chriskempson/base16-vim'
-Plugin 'bling/vim-airline'
-" Not needed unless tabs are expanded
-" Plugin 'Yggdroot/indentLine'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'valloric/youcompleteme'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
-
+Plugin 'sheerun/vim-polyglot'
+Plugin 'vimwiki/vimwiki'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" Use ctrl-[hjkl] to select the active split!
+" Use ctrl-[hjkl] to select the active split
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
@@ -29,13 +29,14 @@ nmap <silent> <c-l> :wincmd l<CR>
 
 set tabstop=4
 set shiftwidth=4
-" set expandtab
 
 " NERDTREE
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+
 " Use ctrl-n to toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
+
 " Make vim open nerdtree at cwd when 'vim' is typed
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -44,13 +45,6 @@ let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 " END NERDTREE
-
-" B16 COLOR
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
-" END B16 COLOR
 
 " SYNTASTIC
 set statusline+=%#warningmsg#
@@ -71,9 +65,29 @@ autocmd BufNewFile,BufRead *.asm set filetype=nasm
 set guicursor+=n:hor20-Cursor/lCursor
 " END CURSOR
 
+" Replace tab with '|   ' in display for indentation readability
 set list lcs=tab:\|\ 
+
+" Required for B16 stuffs
+let base16colorspace=256
+set t_Co=256
+
+" END AIRLINE
+let g:airline_theme='base16_google'
+let g:Powerline_symbols = 'fancy'
+
+colorscheme base16-default-dark
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+      let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+" END AIRLINE
 
 syntax on
 set number
+set cursorline
 set encoding=utf-8
 set background=dark
