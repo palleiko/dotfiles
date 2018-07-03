@@ -86,6 +86,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 " END AIRLINE
 
+set backspace=indent,eol,start
+
 syntax on
 set number
 set cursorline
