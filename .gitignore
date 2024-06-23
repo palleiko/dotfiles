@@ -1,3 +1,4 @@
 # relevant folders
 *
 !/.config/nvim
+!/.config/nvim/*
