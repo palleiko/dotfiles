@@ -1,17 +1,3 @@
 # relevant folders
 *
-!/.zshrc
-!/.gitignore
-!/.config/i3/*
-!/.config/conky/*
-!/.vim/*
-!/.Xresources
-!/.bashrc
-!/.wallpaper.jpg
-!/colors/*
-
-# vim turds
-*.swp
-*.swo
-*.swn
-
+!.config/nvim
